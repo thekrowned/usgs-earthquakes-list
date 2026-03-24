@@ -1,0 +1,29 @@
+:root {
+  --header-background: hsl(180, 50%, 35%);
+	--header-foreground: hsl(0, 0%, 100%);
+	--header-shadow: hsl(0, 0%, 0%);
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+    --header-background: hsl(180, 50%, 30%);
+		--header-foreground: hsl(0, 0%, 100%);
+		--header-shadow: hsl(0, 0%, 0%);
+  }
+}
+
+.header {
+  padding: 0.6rem;
+	display: flex;
+	flex-direction: row;
+	background-color: var(--header-background);
+	color: var(--header-foreground);
+	box-shadow: 0 0 0.4rem var(--header-shadow);
+	position: sticky;
+	top: 0;
+	z-index: 100;
+}
+
+.header-title {
+  font-size: 1.5rem;
+}
